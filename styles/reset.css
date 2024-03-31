@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/********************************
+reset
+********************************/
+* {margin:0;padding:0;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong,
+sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+figcaption, figure, footer, header, menu, nav, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;  background:transparent;-webkit-text-size-adjust:none;word-break:keep-all;}
+body {margin:0;padding:0;height:auto; font-size:18px;color:#000;}
+html, body{font-family:"NotoSans",sans-serif,Helvetica;letter-spacing:0;}
+input, select, textarea,label,fieldset{vertical-align:middle;}
+label {vertical-align:middle;}
+address, em {font-style:normal;}
+i, em, u, cite {font-style:normal}
+strong, b, th {font-weight:bold;}
+fieldset, img {border:0;}
+img {max-width:100%;width:auto;vertical-align:middle;}
+caption, legend, figcaption {position:absolute;overflow:hidden;clip:rect(0,0,0,0);margin:-1px;width:1px;height:1px;font-size:1px;line-height:0;display:none;}
+ul, ol, dl, dt, dd, li {list-style:none}
+h1, h2, h3, h4, h5, h6 {font-weight:bold;font-size:100%;}
+input, textarea, select { border:0;color:#666;vertical-align:middle;}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {display:block;}
+a {text-decoration:none; color:#252525}
+button {cursor:pointer;outline:none;overflow:visible;margin:0;padding:0;border:none;background-color:transparent;vertical-align:middle;}
+button::-moz-focus-inner {margin:0;padding:0;border:0}
+button, input[type="submit"], input[type="button"], input[type="reset"] {cursor:pointer;border:0}
+table {width:100%;table-layout:fixed}
+th,td {vertical-align:middle;}
+table, th, td {border-spacing:0;border-collapse:collapse;*border-collapse:collapse;word-wrap:break-word;}
+select {-moz-appearance:none;-webkit-appearance:none;appearance:none;}
+select::-ms-expand {display:none;}
+textarea {width:100%;overflow-y:auto;resize:none;}
+input {padding:0;margin:0;width:100%;border:1px solid #ccc;color:#222;border:none;-webkit-border-radius:0;}
+input[disabled] {background:#fff}
+input,textarea {-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+input[type="number"], input[type="file"] {-webkit-appearance:none;}
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {margin:0;-webkit-appearance:none;}
+input[type="text"]::-ms-clear {display:none;}
+input[type="radio"] {width:auto;}
+input[type="checkbox"] {width:auto;}
+input[type="radio"]:disabled + label {color:#666;}
+*::-webkit-input-placeholder {color: #b0b0b0 !important}
+*:-moz-placeholder {color: #b0b0b0 !important}/* FF 4-18 */
+*::-moz-placeholder {color: #b0b0b0 !important}/* FF 19+ */
+*:-ms-input-placeholder {color: #b0b0b0 !important}/* IE 10+ */
+
+/*input*/
+label {display:inline; cursor:pointer;}
+input{display:inline-block; width:auto; height:34px; padding:0 10px; border:1px solid #c3c3c3;}
+input.full{width:100%;}
+label{color:#222;}
+label+input{margin-left:20px;}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-transition: background-color 9999s ease-out;
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+/* checkbox + label */
+input[type="checkbox"] {position:absolute; overflow:hidden; width:1px; height:1px; left:-9999px; outline:0;}
+input[type="checkbox"] + label {display:inline-flex;align-items: center; font-size:0;}
+input[type="checkbox"] + label:before {content:'';display:inline-block;width:32px; height:32px; vertical-align:middle; cursor:pointer; background-image:url('../public/checkbox_chk_off.png');background-repeat: no-repeat;background-position: left;background-size: cover;}
+input[type="checkbox"] + label span {padding-left:10px; font-size:14px; font-weight:400; color:#666; vertical-align:middle;}
+input[type="checkbox"]:checked + label:before {background-image:url('../public/checkbox_chk_on.png');}
+input[type="checkbox"]:checked + label span {color:#222;}
+.check_box > span + span {margin-left:30px;}
+.check_box .alert.c_red {font-size:14px; font-weight:300; color:#f6487a}
+.check_box.type02 input[type="checkbox"] + label span {color:#444;}
+.check_box.type02 input[type="checkbox"]:checked + label span {color:#222}

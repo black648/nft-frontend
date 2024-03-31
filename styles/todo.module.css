@@ -1,0 +1,117 @@
+/* listWrap */
+.listWrap {
+    width: 400px;
+    margin: 40px auto;
+}
+.listWrap h1 {
+    text-align: center;
+    font-family: "NanumSquareNeoHeavy", sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: -0.75px;
+}
+.btnRegist {
+    padding: 10px 20px;
+    font-size: 15px;
+    letter-spacing: -0.75px;
+    color: #fff;
+    background-color: #595959;
+    border-radius: 5px;
+}
+.listWrap h4 {
+    text-align: center;
+}
+.listItem {
+    padding: 10px 0;
+}
+.listItem:first-of-type {
+    margin-top: 20px;
+}
+.listItem:not(:last-of-type) {
+    border-bottom: 1px solid #e6e6e6;
+}
+.listItem button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 17px;
+}
+.listItem .title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+}
+.listItem .date {
+    color: #bababa;
+}
+
+/* popup */
+.popupBg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    z-index: 1;
+}
+.popup {
+    overflow: hidden;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.popup .pop-cont{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    padding: 70px 50px 50px 50px;
+    background-color: #fff;
+    z-index: 2;
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
+}
+.popup #closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+}
+.popTitle {
+    width: 100%;
+    border-radius: 5px;
+}
+.popText {
+    width: 100%;
+    min-height: 300px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border:1px solid #c3c3c3;
+    font-family: "NanumSquareNeo", sans-serif;
+    font-size: 15px;
+    letter-spacing: -0.75px;
+    outline: none;
+}
+.buttonGroup {
+    display: flex;
+    justify-content: center;
+}
+.buttonGroupFlexEnd {
+    display: flex;
+    justify-content: flex-end;
+}
+.popBtn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 15px;
+    letter-spacing: -0.75px;
+    color: #fff;
+    background-color: #595959;
+    border-radius: 5px;
+}
