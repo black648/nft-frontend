@@ -1,12 +1,21 @@
 import styles from "../../styles/todo.module.css";
+import {useDispatch} from "react-redux";
+import {displayModal} from "../store/modalSlice";
+
 
 const TodoList = () => {
+    const dispatch = useDispatch();
+
+    const displayModalHandler = () => {
+        dispatch(displayModal(true));
+    };
+
     return (
         <>
             <div className={styles.listWrap}>
                 <h1>To Do List</h1>
                 <div className={styles.buttonGroupFlexEnd}>
-                    <button type="button" className={styles.btnRegist}>등록</button>
+                    <button className={styles.btnRegist} onClick={() => displayModalHandler()}>등록</button>
                 </div>
                 <ul>
                     <li className={styles.listItem}>

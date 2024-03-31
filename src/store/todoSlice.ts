@@ -1,11 +1,11 @@
 import {Todo} from "../types/todo";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
-interface todo {
+interface TodoState {
     todos: Todo[],
 }
 
-const initialState: todo = {
+const initialState: TodoState = {
     todos: []
 };
 

@@ -48,7 +48,6 @@ input[type="radio"]:disabled + label {color:#666;}
 /*input*/
 label {display:inline; cursor:pointer;}
 input{display:inline-block; width:auto; height:34px; padding:0 10px; border:1px solid #c3c3c3;}
-input.full{width:100%;}
 label{color:#222;}
 label+input{margin-left:20px;}
 input:-webkit-autofill,
@@ -60,15 +59,3 @@ input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0px 1000px white inset !important;
     -webkit-text-fill-color: #000 !important;
 }
-
-/* checkbox + label */
-input[type="checkbox"] {position:absolute; overflow:hidden; width:1px; height:1px; left:-9999px; outline:0;}
-input[type="checkbox"] + label {display:inline-flex;align-items: center; font-size:0;}
-input[type="checkbox"] + label:before {content:'';display:inline-block;width:32px; height:32px; vertical-align:middle; cursor:pointer; background-image:url('../public/checkbox_chk_off.png');background-repeat: no-repeat;background-position: left;background-size: cover;}
-input[type="checkbox"] + label span {padding-left:10px; font-size:14px; font-weight:400; color:#666; vertical-align:middle;}
-input[type="checkbox"]:checked + label:before {background-image:url('../public/checkbox_chk_on.png');}
-input[type="checkbox"]:checked + label span {color:#222;}
-.check_box > span + span {margin-left:30px;}
-.check_box .alert.c_red {font-size:14px; font-weight:300; color:#f6487a}
-.check_box.type02 input[type="checkbox"] + label span {color:#444;}
-.check_box.type02 input[type="checkbox"]:checked + label span {color:#222}

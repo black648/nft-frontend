@@ -1,9 +1,13 @@
 import type { NextPage } from 'next';
 import TodoList from "../src/components/TodoList";
+import TodoFormModal from "../src/components/TodoFormModal";
 
 const Home: NextPage = () => {
     return (
-        <TodoList />
+        <main>
+            <TodoList />
+            <TodoFormModal />
+        </main>
     );
 };
 
