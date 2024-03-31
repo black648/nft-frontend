@@ -1,12 +1,12 @@
 import type { NextPage } from 'next';
 import TodoList from "../src/components/TodoList";
-import TodoFormModal from "../src/components/TodoFormModal";
+import TodoModal from "../src/components/TodoModal";
 
 const Home: NextPage = () => {
     return (
         <main>
             <TodoList />
-            <TodoFormModal />
+            <TodoModal />
         </main>
     );
 };

@@ -17,7 +17,6 @@ const TodoList = () => {
         dispatch(displayModal({display: true, id: id}));
     };
 
-
     return (
         <>
             <div className={styles.listWrap}>
@@ -29,11 +28,11 @@ const TodoList = () => {
                     { todos.map((todo) => (
                         <li key = {todo.id} className={styles.listItem}>
                             <button type="button" onClick={() => viewModal(todo.id)}>
-                                <p className={styles.title}>{todo.title}</p>
+                                <p className={styles.title}>{todo.id} {todo.title}</p>
                                 <span className={styles.date}>{todo.updatedAt}</span>
                             </button>
                         </li>
-                    ))};
+                    ))}
                 </ul>
             </div>
         </>
