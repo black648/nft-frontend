@@ -114,3 +114,14 @@
     background-color: #595959;
     border-radius: 5px;
 }
+
+.popDeleteBtn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 15px;
+    letter-spacing: -0.75px;
+    color: #fff;
+    background-color: #d00d0d;
+    border-radius: 5px;
+}

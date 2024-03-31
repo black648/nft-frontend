@@ -7,23 +7,28 @@ import {selectList} from "../store/selectTodo";
 const TodoList = () => {
     const dispatch = useDispatch();
 
-    const displayModalHandler = () => {
-        dispatch(displayModal(true));
+    const createModal = () => {
+        dispatch(displayModal({ display: true }));
     };
 
     const todos = useSelector(selectList);
+
+    const viewModal = (id: number) => {
+        dispatch(displayModal({display: true, id: id}));
+    };
+
 
     return (
         <>
             <div className={styles.listWrap}>
                 <h1>To Do List</h1>
                 <div className={styles.buttonGroupFlexEnd}>
-                    <button className={styles.btnRegist} onClick={() => displayModalHandler()}>등록</button>
+                    <button className={styles.btnRegist} onClick={() => createModal()}>등록</button>
                 </div>
                 <ul>
                     { todos.map((todo) => (
                         <li key = {todo.id} className={styles.listItem}>
-                            <button type="button">
+                            <button type="button" onClick={() => viewModal(todo.id)}>
                                 <p className={styles.title}>{todo.title}</p>
                                 <span className={styles.date}>{todo.updatedAt}</span>
                             </button>
