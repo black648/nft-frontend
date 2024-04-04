@@ -19,7 +19,7 @@ const todoSlice = createSlice({
                 ...action.payload,
                 updatedAt: action.payload.createdAt,
             };
-            state.todos.push(newTodo);
+            state.todos.unshift(newTodo);
         },
         updateTodo: (state, action: PayloadAction<Partial<Todo> & { id: number }>) => {
             const { id, ...changes } = action.payload;
